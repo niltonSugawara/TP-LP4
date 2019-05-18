@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/padrao.css">
     <link rel="icon" href="resources/game.png">
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
     <title>Museu dos Jogos</title>
   </head>
   <body>
+
     <div class="container">
       <div class="nav navbar-light" id="txtBase">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand font-weight-bold" href="#">
           <img src="resources/game.png" width="50" height="50" class="d-inline-block" alt="">
           Museu dos Jogos
         </a>
@@ -25,14 +24,18 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="sistemas.php">Sistemas</a>
+              <a class="nav-link" href="plataformas.php">Plataformas</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="games.php">Games</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="sobre.php">Sobre</a>
             </li>
           </ul>
+          <a href="login.php" class="btn btn-dark">Entrar</a>
         </div>
       </nav>
     </div>
+
   </body>
 </html>
