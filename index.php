@@ -30,22 +30,7 @@
         		</div>
         	</div>
         </div>
-        <div class="row">
-          <div class="col" style="background-color:blue;">Coluna 1</div>
-          <div class="col" style="background-color:red;">Coluna 2</div>
-          <div class="col" style="background-color:orange;">Coluna 3</div>
-          <div class="col" style="background-color:green;">Coluna 4</div>
-        </div>
-        <div class="row">
-          <div class="col" style="background-color:grey;">Coluna 4</div>
-        </div>
-    </div>
-    <div class="container">
-      <form class="" action="login.php" method="post">
-        <label>Usuário<input type="text" name="usuario" value=""></label>
-        <label>Senha<input type="password" name="senha" value=""></label>
-        <input type="submit" value="Login">
-      </form>
+
 
     </div>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
