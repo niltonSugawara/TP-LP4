@@ -1,6 +1,9 @@
 <?php
-
+session_start()
 $conexao = mysqli_connect("localhost","root","","museuGames");
+$usuario = $_POST("usuario");
+$senha = $_POST("senha");
+
 if ($conexao == null){
   die("Não foi possível fazer conexão");
 }else{

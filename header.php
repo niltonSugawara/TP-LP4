@@ -17,6 +17,7 @@
 				class="d-inline-block" alt=""> Museu dos Jogos
 			</a>
 		</div>
+		<!--navbar principal -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="collapse navbar-collapse" id="navtxt">
 				<ul class="navbar-nav mr-auto">
@@ -29,7 +30,7 @@
 					<li class="nav-item active"><a class="nav-link" href="sobre.php">Sobre</a>
 					</li>
 				</ul>
-				
+				<!--Modal do Login -->
 				<a id="user" href="" class="btn btn-dark" data-toggle="modal"
 					data-target="#formModal">Entrar</a>
 			</div>
@@ -44,18 +45,22 @@
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
+						<!--Corpo do Modal de Login -->
 						<div class="modal-body">
 							<form action="login.php" method="post">
 								<div class="form-group">
-									<label for="email">Email</label> <input type="email"
+									<label for="email">Email</label> <input type="email" name="email"
 										class="form-control" id="email">
 								</div>
 								<div class="form-group">
-									<label for="pwd">Senha</label> <input type="password"
+									<label for="pwd">Senha</label> <input type="password" name="senha" 
 										class="form-control" id="pwd">
 								</div>
 								<button type="submit" class="btn btn-dark">Entrar</button>
+
 							</form>
+							<br>
+							<!--Link de criação de usuário -->
 							<div class="modal-footer">
 								<p>Não possui conta? <a href="cadastro.php"> Crie uma!</a></p>
 								
