@@ -6,7 +6,7 @@ Site desenvolvido com PHP
 Recomendações para construção do site:
 Usar Basic Template: https://www.w3schools.com/bootstrap4/default.asp
 
-1)Página Home Page com no mínimo os seguintes recursos de Bootstrap:
+1) Página Home Page com no mínimo os seguintes recursos de Bootstrap:
 
 Typograph
 Colors
