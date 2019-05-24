@@ -8,16 +8,16 @@ Usar Basic Template: https://www.w3schools.com/bootstrap4/default.asp
 
 1) Página Home Page com no mínimo os seguintes recursos de Bootstrap:
 
-Typograph
-Colors
-Images - Rounded Corners
-Table - Responsive
-Button Groups
-List Groups
-Card (com image, title, text and links)
-Dropdown with Divider
-Forms
-Carousel
+Typograph;
+Colors;
+Images - Rounded Corners;
+Table - Responsive;
+Button Groups;
+List Groups;
+Card (com image, title, text and links);
+Dropdown with Divider;
+Forms;
+Carousel;
 Modal
 
 Glyphicon Components
