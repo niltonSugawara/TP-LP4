@@ -3,14 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/padrao.css">
-<link rel="icon" href="resources/game.png">
 <title>Museu dos Jogos</title>
 </head>
 <body>
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="nav navbar-light" id="txtBase">
 			<a class="navbar-brand font-weight-bold" href="#"> <img
 				src="resources/game.png" width="50" height="50"
@@ -18,7 +15,7 @@
 			</a>
 		</div>
 		<!--navbar principal -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
 			<div class="collapse navbar-collapse" id="navtxt">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active"><a class="nav-link" href="index.php">Home</a>
@@ -31,7 +28,7 @@
 					</li>
 				</ul>
 				<!--Modal do Login -->
-				<a id="user" href="" class="btn btn-dark" data-toggle="modal"
+				<a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal"
 					data-target="#formModal">Entrar</a>
 			</div>
 			<div class="modal fade" id="formModal" tabindex="-1" role="dialog"
@@ -72,6 +69,6 @@
 			</div>
 		</nav>
 	</div>
-
+	<br>
 </body>
 </html>

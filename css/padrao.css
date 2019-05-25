@@ -1,5 +1,15 @@
-#tamPadrao{
-	padding:5px;
-	width: 300px;
-	height: 300px;
-};
+#tamPadrao {
+   padding:5px;
+   width: 450px;
+   height: 300px;
+}
+#rodape{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+.bloco{
+	padding-top: 2px;
+}

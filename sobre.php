@@ -19,6 +19,10 @@
   Disciplina de Linguagem de Programação 4 - Prof Paulo Candido
   </p>
 	</div>
+
+
+
+  <?php include("footer.php"); ?>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
   </body>
