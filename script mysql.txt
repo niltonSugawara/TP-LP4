@@ -1,1 +1,1 @@
-CREATE TABLE usuario (id_usuario int null PRIMARY KEY, nome varchar(100) not null, senha varchar(32) not null);
+CREATE TABLE usuario (id_usuario int NOT NULL PRIMARY KEY AUTO_INCREMENT, nome varchar(100) NOT NULL, senha varchar(32) NOT NULL);
