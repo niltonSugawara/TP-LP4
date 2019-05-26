@@ -18,16 +18,16 @@ include("includes/header.php");
       <div id="carouselGames" class="carousel slide carousel-fade" data-ride="carousel" align="center">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img id="tamPadrao" class="d-block w-50" alt="Primeiro Slide" src="../resources/superMarioWorld">
+               <img id="tamPadrao" class="d-block w-50" alt="Primeiro Slide" src="../resources/images/superMarioWorld">
            </div>
            <div class="carousel-item">
-               <img id="tamPadrao" class="d-block w-50" alt="Segundo Slide" src="../resources/pacman">
+               <img id="tamPadrao" class="d-block w-50" alt="Segundo Slide" src="../resources/images/pacman">
            </div>
            <div class="carousel-item">
-               <img id="tamPadrao" class="d-block w-50" alt="Terceiro Slide" src="../resources/spaceInvaders">
+               <img id="tamPadrao" class="d-block w-50" alt="Terceiro Slide" src="../resources/images/spaceInvaders">
            </div>
            <div class="carousel-item">
-               <img id="tamPadrao" class="d-block w-50" alt="Quarto Slide" src="../resources/sonicTheHedgehog">
+               <img id="tamPadrao" class="d-block w-50" alt="Quarto Slide" src="../resources/images/sonicTheHedgehog">
            </div>
        </div>
    </div>

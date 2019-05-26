@@ -1,7 +1,7 @@
 	<div class="container-fluid">
 		<div class="nav navbar-light" id="txtBase">
 			<a class="navbar-brand font-weight-bold" href="#"> <img
-				src="../resources/game.png" width="50" height="50"
+				src="../resources/images/game.png" width="50" height="50"
 				class="d-inline-block" alt=""> Museu dos Jogos
 			</a>
 		</div>
