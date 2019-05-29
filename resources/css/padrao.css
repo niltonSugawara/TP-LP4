@@ -9,6 +9,7 @@
    bottom: 0;
    width: 100%;
    text-align: center;
+   clear: both;
 }
 .bloco{
 	padding-top: 2px;

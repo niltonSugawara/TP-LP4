@@ -37,12 +37,7 @@ include("includes/header.php");
     <h3 align="center">Site desenvolvido para o jogador criar seu portifólio de jogos e videogames!</h3>        
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col" style="background-color: blue">a</div>
-        <div class="col" style="background-color: green">b</div>
-    </div>
-</div>
+
 
 <?php include("includes/footer.php"); ?>    
 </body>
