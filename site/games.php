@@ -62,12 +62,12 @@ include("includes/header.php");
 						<form action="#" method="post">
 							<div class="form-group">
 								<label for="email">Seu Email</label> <input type="email" name="email"
-										class="form-control" id="email">
+										class="form-control" id="email" required>
 							</div>
 							<div class="form-group">
 								<label for="msg">Mensagem a ser enviada</label>
 								<br>
-								<textarea class="form-control" name="msgTxt" rows="5" cols="48"></textarea>
+								<textarea class="form-control" name="msgTxt" rows="5" cols="48" required></textarea>
 							</div>
 							<button type="submit" class="btn btn-dark">Enviar</button>
 
