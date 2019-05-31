@@ -10,21 +10,13 @@ session_start();
     <title>Home | Museu dos Jogos</title>
 </head>
 <body>
-<<<<<<< HEAD
-<div class="content">
-<?php 
-include("includes/header.php");
-?>  
-<div>
-<div class="container">
-=======
 
 <?php 
 include("includes/header.php");
 ?>  
 <div class="container conteudoCorpo">
     <div class="container">
->>>>>>> 326a3ccc1b74f7a3e7b9b331dd62068f7128baec
+
       <h1 align="center">Bem Vindo ao Museu dos Jogos</h1>
       <div id="carouselGames" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false" align="center">
          <div class="carousel-inner">
@@ -54,21 +46,9 @@ include("includes/header.php");
     <h3 align="center">Site desenvolvido para o jogador criar seu portifólio de jogos de videogames!</h3>        
 </div>
 
-<<<<<<< HEAD
-<div class="container">
-    <div class="row">
-        <div class="col" style="background-color: blue">a</div>
-        <div class="col" style="background-color: green">b</div>
-    </div>
-</div>
-</div>
-
-<?php include("includes/footer.php"); ?> 
-</div>   
-=======
 
 </div>
 <?php include("includes/footer.php"); ?>    
->>>>>>> 326a3ccc1b74f7a3e7b9b331dd62068f7128baec
+
 </body>
 </html>
