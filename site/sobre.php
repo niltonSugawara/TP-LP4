@@ -16,7 +16,7 @@ session_start();
 <div class="container conteudoCorpo">
   <div class="container">
   <br>
-  <p>Site Devenvolvido com propósito de demonstrar diversas funcionalidades
+  <p>Site Desenvolvido com propósito de demonstrar diversas funcionalidades
   sobre PHP, Bootstrap, MySql e conceitos básicos de HMTL,CSS, JAVASCRIPT.
   Disciplina de Linguagem de Programação 4 - Prof Paulo Candido
   </p>

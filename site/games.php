@@ -22,7 +22,7 @@ include("includes/header.php");
 					<thead>
 					<tr>
 						<th>Título</th>
-						<th>Plataformas</th>
+						<th>Console</th>
 						<th>Usuários</th>
 						<th>Venda/Troca</th>
 						<th>Contato(Tel)</th>

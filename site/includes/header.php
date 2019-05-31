@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="nav navbar-light" id="txtBase">
-        <a class="navbar-brand font-weight-bold" href="#"> <img
-            src="../resources/images/game.png" width="50" height="50"class="d-inline-block" alt=""> Museu dos Jogos
-        </a>
+        <nav class="navbar-brand font-weight-bold" > <img
+            src="../resources/images/spaceInvaders.gif" width="50" height="50"class="d-inline-block rounded-circle" alt=""> Museu dos Jogos
+        </nav>
     </div>
 <!--navbar principal -->
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
