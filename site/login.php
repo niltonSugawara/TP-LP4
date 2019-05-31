@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 $conexao = mysqli_connect("localhost","root","","museuGames");
 $usuario = $_POST("usuario");
 $senha = $_POST("senha");
