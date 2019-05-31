@@ -1,6 +1,6 @@
-	<div class="container-fluid">
+	<div class="container-fluid nav-head">
 		<div class="nav navbar-light" id="txtBase">
-			<a class="navbar-brand font-weight-bold" href="#"> <img
+			<a class="navbar-brand font-weight-bold" href="index.php"> <img
 				src="../resources/images/game.png" width="50" height="50"
 				class="d-inline-block" alt=""> Museu dos Jogos
 			</a>
@@ -60,4 +60,3 @@
 			</div>
 		</nav>
 	</div>
-	<br>

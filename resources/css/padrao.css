@@ -1,12 +1,35 @@
+/*html {
+   height: 100%;
+}*/
+body {
+   box-sizing: border-box;	
+   /*min-height: 100%;*/
+}
+.nav-head {
+   margin-bottom: 10px;
+}
+.content,
+.relative {
+   position: relative;
+}
+.relative {
+   margin-top: 20px;
+   /*argin-bottom: 20px;*/
+   display: flex;
+   justify-items: center;
+}
+.relative + .relative {
+   margin-top: 0;
+}
+.content {
+	/*height: 100vh;*/
+}
 #tamPadrao {
    padding:5px;
    width: 450px;
    height: 300px;
 }
 #rodape{
-   position: fixed;
-   left: 0;
-   bottom: 0;
    width: 100%;
    text-align: center;
 }
