@@ -10,9 +10,11 @@ session_start();
     <title>Home | Museu dos Jogos</title>
 </head>
 <body>
+
 <?php 
 include("includes/header.php");
 ?>  
+<div class="container conteudoCorpo">
     <div class="container">
       <h1 align="center">Bem Vindo ao Museu dos Jogos</h1>
       <div id="carouselGames" class="carousel slide carousel-fade" data-ride="carousel" align="center">
@@ -38,7 +40,7 @@ include("includes/header.php");
 </div>
 
 
-
+</div>
 <?php include("includes/footer.php"); ?>    
 </body>
 </html>

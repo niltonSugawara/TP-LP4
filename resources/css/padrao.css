@@ -1,15 +1,24 @@
+div.total{
+   width: 100%;
+}
+div.conteudoCorpo{
+   margin-bottom: 40px;
+   width:100%;
+}
 #tamPadrao {
    padding:5px;
    width: 450px;
    height: 300px;
 }
 #rodape{
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
    clear: both;
+   border-top: 1px;
+   bottom: 0;
+   left: 0;
+   height: 40px;
+   position: relative;
+   text-align: center;
+   width: 100%;
 }
 .bloco{
 	padding-top: 2px;
