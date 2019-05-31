@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*html {
    height: 100%;
 }*/
@@ -23,6 +24,14 @@ body {
 }
 .content {
 	/*height: 100vh;*/
+=======
+div.total{
+   width: 100%;
+}
+div.conteudoCorpo{
+   margin-bottom: 40px;
+   width:100%;
+>>>>>>> 326a3ccc1b74f7a3e7b9b331dd62068f7128baec
 }
 #tamPadrao {
    padding:5px;
@@ -30,8 +39,18 @@ body {
    height: 300px;
 }
 #rodape{
+<<<<<<< HEAD
    width: 100%;
+=======
+   clear: both;
+   border-top: 1px;
+   bottom: 0;
+   left: 0;
+   height: 40px;
+   position: relative;
+>>>>>>> 326a3ccc1b74f7a3e7b9b331dd62068f7128baec
    text-align: center;
+   width: 100%;
 }
 .bloco{
 	padding-top: 2px;

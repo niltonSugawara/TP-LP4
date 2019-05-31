@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -10,9 +10,11 @@ session_start();
 	<title>Games | Museu dos Jogos</title>
 </head>
 <body>
-<?php 
+<?php
 include("includes/header.php");
-?> 
+?>
+<div class="container total">
+<div class="container conteudoCorpo">
 <div class="container">
 		<div class="row">
 			<div class="table-responsive-sm">
@@ -20,7 +22,7 @@ include("includes/header.php");
 					<thead>
 					<tr>
 						<th>Título</th>
-						<th>Plataformas</th>
+						<th>Console</th>
 						<th>Usuários</th>
 						<th>Venda/Troca</th>
 						<th>Contato(Tel)</th>
@@ -49,7 +51,6 @@ include("includes/header.php");
 <div class="modal fade" id="formModalTxt" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				
 				<div class="modal-header">
 							<h5>Mensagem</h5>
 							<button type="button" class="close" data-dismiss="modal"
@@ -62,12 +63,12 @@ include("includes/header.php");
 						<form action="#" method="post">
 							<div class="form-group">
 								<label for="email">Seu Email</label> <input type="email" name="email"
-										class="form-control" id="email">
+										class="form-control" id="email" required>
 							</div>
 							<div class="form-group">
 								<label for="msg">Mensagem a ser enviada</label>
 								<br>
-								<textarea class="form-control" name="msgTxt" rows="5" cols="48"></textarea>
+								<textarea class="form-control" name="msgTxt" rows="5" cols="48" required></textarea>
 							</div>
 							<button type="submit" class="btn btn-dark">Enviar</button>
 
@@ -75,9 +76,10 @@ include("includes/header.php");
 				</div>
 		 	</div>
 		</div>
-</div>		
+</div>
 
-
+</div>
+</div>
 <?php include("includes/footer.php"); ?>
 </body>
 </html>

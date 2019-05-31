@@ -13,21 +13,54 @@ session_start();
 <?php 
 include("includes/header.php");
 ?>
-  <div class="container">
-   <div class="row">
-    <div class="col-sm-4" style="background-color: grey">
-      <ul>
-        <li>Nintendo</li>
-        <li>SEGA</li>
-        <li>SONY</li>
-        <li>Microsoft</li>
-      </ul>
+<div class="container conteudoCorpo">
+
+    <div class="container">
+         <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Nintendo</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">eita</a>
+            </div>
+        </div>
+         <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sega</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">eita</a>
+            </div>
+        </div>
+         <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">eita</a>
+            </div>
+        </div>
+         <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Microsoft</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">eita</a>
+            </div>
+        </div>
     </div>
-     <div class="col-sm-8" style="background-color: cyan">a</div>
- </div>
-</div>
 
 
+<br>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Jogo</th>
+                    <th>Usuário</th>
+                    <th>Venda/Troca</th>
+                    <th>Mandar Mensagem</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+
+    
+    
+    </div>
 <?php include("includes/footer.php"); ?>
 </body>
 </html>
