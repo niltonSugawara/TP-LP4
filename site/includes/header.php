@@ -6,7 +6,10 @@
     </div>
 <!--navbar principal -->
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="navtxt">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navConteudo">
+        <span class="navbar-toggler-icon"></span>        
+        </button>
+        <div class="collapse navbar-collapse" id="navConteudo">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item active"><a class="nav-link" href="plataformas.php">Plataformas</a></li>
@@ -16,7 +19,7 @@
             </ul>
         <!--botão do Modal de Login -->
             <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>
-        </div>
+        
     <!--Começo do Modal de Login -->
         <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -85,5 +88,6 @@
                                 </div>
                             </div>
                         </div>
+            </div>
     </nav>
 

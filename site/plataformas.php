@@ -45,7 +45,7 @@ include("includes/header.php");
 
 <br>
     <div class="container">
-        <table class="table table-striped">
+        <table class="table table-responsive-md table-striped">
             <thead>
                 <tr>
                     <th>Jogo</th>

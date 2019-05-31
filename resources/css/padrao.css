@@ -58,6 +58,10 @@ div.conteudoCorpo{
    text-align: center;
 }
 
+#mapa iframe{
+   max-width: 100%;
+}
+
 .bloco{
 	padding-top: 2px;
 }
