@@ -54,6 +54,10 @@ div.conteudoCorpo{
    width: 100%;
 }
 
+#mapa{
+   text-align: center;
+}
+
 .bloco{
 	padding-top: 2px;
 }
