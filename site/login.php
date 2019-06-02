@@ -1,4 +1,7 @@
 <?php
+if($_SESSION['usuario'] == false){
+  header("location:restrito.php");
+}
 session_start();
 $conexao = mysqli_connect("localhost","root","","museuGames");
 $usuario = $_POST("usuario");

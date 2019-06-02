@@ -54,6 +54,10 @@ div.conteudoCorpo{
    width: 100%;
 }
 
+.centro{
+   text-align: center;
+}
+
 #mapa{
    text-align: center;
 }

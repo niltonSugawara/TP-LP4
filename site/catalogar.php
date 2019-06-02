@@ -1,6 +1,10 @@
 <?php
-session_start();
+if($_SESSION['usuario'] == false){
+  header("location:restrito.php");
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

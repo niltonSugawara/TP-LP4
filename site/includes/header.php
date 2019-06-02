@@ -1,3 +1,23 @@
+<?php session_start();
+$_POST['email'] = null;
+$_POST['senha'] = null;
+$conec = @mysqli_connect("localhost","root","","museuGames");
+$user = @mysqli_prepare($concec,"select email from usuario");
+$senha = @mysqli_prepare($concec,"select senha from usuario");
+$logado = ($user==$_POST['email'] and $senha==$_POST['senha']);
+if ($conec == null){
+    die("falha ao conectar");
+} else{
+    echo "Bem vindo";
+}
+
+if ($logado){
+    $_SESSION['usuario'] = true;
+}else{
+    echo "Falha de Login";
+}
+
+?>
 <div class="container-fluid">
     <div class="nav navbar-light" id="txtBase">
         <nav class="navbar-brand font-weight-bold" > <img
@@ -14,11 +34,23 @@
                 <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item active"><a class="nav-link" href="plataformas.php">Plataformas</a></li>
                 <li class="nav-item active"><a class="nav-link" href="games.php">Games</a></li>
-                <li class="nav-item active"><a class="nav-link" href="catalogar.php">Catálogo</a></li>
+                <?php 
+                if($logado == false){
+                echo "<li class=\"nav-item active\"><a class=\"nav-link\" href=\"catalogar.php\">Catálogo</a></li>";
+            }
+                ?>
                 <li class="nav-item active"><a class="nav-link" href="sobre.php">Sobre</a></li>
             </ul>
         <!--botão do Modal de Login -->
-            <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>
+        
+            
+            <?php if(isset($_SESSION['usuario'])): ?>
+                <a id="userLog" href="" class="btn btn-secondary text-primary" onclick="fecharSession()">Sair</a>";
+            <?php else: ?>
+                <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>";
+            <?php endif; ?>    
+            
+            <!--<a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>-->
         
     <!--Começo do Modal de Login -->
         <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
@@ -32,7 +64,7 @@
                     </div>
             <!--Corpo do Modal de Login -->
                     <div class="modal-body">
-                        <form action="login.php" method="post">
+                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                             <div class="form-group">
     	                       <label for="email">Email</label> <input type="email" name="email" class="form-control" id="email" required>
                             </div>
@@ -80,7 +112,7 @@
                                                 <label>Tel(Cel)</label><br><input type="tel" name="telefone">
                                             </div>
                                             <div>
-                                                <label>E-mail</label><br><input type="email" name="email" required>
+                                                <label>E-mail</label><br><input type="email" name="emailCadastro" required>
                                             </div>
                                             <input type="submit" name="cadastra" value="Enviar">
                                         </form>
