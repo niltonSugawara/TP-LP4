@@ -1,22 +1,4 @@
 <?php session_start();
-$_POST['email'] = null;
-$_POST['senha'] = null;
-$conec = @mysqli_connect("localhost","root","","museuGames");
-$user = @mysqli_prepare($concec,"select email from usuario");
-$senha = @mysqli_prepare($concec,"select senha from usuario");
-$logado = ($user==$_POST['email'] and $senha==$_POST['senha']);
-if ($conec == null){
-    die("falha ao conectar");
-} else{
-    echo "Bem vindo";
-}
-
-if ($logado){
-    $_SESSION['usuario'] = true;
-}else{
-    echo "Falha de Login";
-}
-
 ?>
 <div class="container-fluid">
     <div class="nav navbar-light" id="txtBase">
@@ -34,20 +16,20 @@ if ($logado){
                 <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item active"><a class="nav-link" href="plataformas.php">Plataformas</a></li>
                 <li class="nav-item active"><a class="nav-link" href="games.php">Games</a></li>
-                <?php 
-                if($logado == false){
-                echo "<li class=\"nav-item active\"><a class=\"nav-link\" href=\"catalogar.php\">Catálogo</a></li>";
-            }
-                ?>
+                
+                <li class="nav-item active"><a class="nav-link" href="catalogar.php">Catálogo</a></li>
+                  
+
+                 
                 <li class="nav-item active"><a class="nav-link" href="sobre.php">Sobre</a></li>
             </ul>
         <!--botão do Modal de Login -->
         
             
             <?php if(isset($_SESSION['usuario'])): ?>
-                <a id="userLog" href="" class="btn btn-secondary text-primary" onclick="fecharSession()">Sair</a>";
+                <a id="userLog" href="includes/sair.php" class="btn btn-secondary text-primary">Sair</a>
             <?php else: ?>
-                <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>";
+                <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>
             <?php endif; ?>    
             
             <!--<a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>-->
@@ -64,12 +46,12 @@ if ($logado){
                     </div>
             <!--Corpo do Modal de Login -->
                     <div class="modal-body">
-                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                        <form action="includes/login.php" method="get">
                             <div class="form-group">
-    	                       <label for="email">Email</label> <input type="email" name="email" class="form-control" id="email" required>
+    	                       <label for="email">Email</label> <input type="email" name="email" class="form-control" id="email"  required>
                             </div>
                             <div class="form-group">
-    	                       <label for="pwd">Senha</label> <input type="password" name="senha" class="form-control" id="pwd" required>
+    	                       <label for="pwd">Senha</label> <input type="password" name="senha" class="form-control" id="pwd"  required>
                             </div>
                             <button type="submit" class="btn btn-dark">Entrar</button>
                         </form><br>
