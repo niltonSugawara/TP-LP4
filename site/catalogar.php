@@ -1,7 +1,7 @@
 <?php
 $conexao = @ mysqli_connect("localhost","root","","museugames");
 $tab = mysqli_query($conexao,"select id,titulo,console,vendaTroca from games");
-$valor = mysqli_num_rows($tab);
+
 
 ?>
 <!DOCTYPE html>
@@ -33,8 +33,7 @@ include("includes/header.php");
         </tr>
       </thead>
       <tbody>
-        <form action="inserir.php" method="post" >
-          <div name="id" value="<?php $valor+1 ?>"></div>
+        <form action="inserir.php" method="post" id="insere" >
           <tr>
           <td><input class="form-control" type="text" name="titulo" placeholder="Que Mario?"></td>
           <td><input class="form-control" type="text" name="console" placeholder="Aquele"></td>
@@ -56,6 +55,7 @@ include("includes/header.php");
         <table class="table table-bordered">
           <thead>
           <tr>
+            <th>#</th>
             <th>Título</th>
             <th>Console</th>
             <th>Usuários</th>
@@ -66,12 +66,12 @@ include("includes/header.php");
           </thead>        
           <?php while ($lin = mysqli_fetch_assoc($tab)) {?>
           <tbody>
-          <?php $lin['id'] ?>
+          <td><?php echo $lin['id'] ?></td>
           <td><?php echo $lin['titulo']; ?></td>
           <td><?php echo $lin['console']; ?></td>
           <td><?php echo "Usuario"; ?></td>
           <td><?php echo $lin['vendaTroca']; ?></td>
-          <td><?php echo "teledone Usuario";?></td>
+          <td><?php echo "telefone Usuario";?></td>
           <td><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" >Opções</button>
           <div class="dropdown-menu">
               <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editarModal<?php echo $lin['id']?>" >Editar</a>
