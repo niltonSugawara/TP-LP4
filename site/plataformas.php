@@ -4,7 +4,7 @@
 <?php
   include("includes/head.php");
 ?>
-  <title>Plataformas | Museu dos jogos</title>
+<title>Plataformas | Museu dos jogos</title>
 </head>
 <body>
 <?php 
@@ -56,8 +56,7 @@ include("includes/header.php");
     
 
     
-    
-    </div>
+</div>
 <?php include("includes/footer.php"); ?>
 </body>
 </html>

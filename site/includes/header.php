@@ -1,10 +1,16 @@
-<?php session_start();
-?>
+<?php  
+session_start();
+?> 
 <div class="container-fluid">
     <div class="nav navbar-light" id="txtBase">
         <nav class="navbar-brand font-weight-bold" > <img
-            src="../resources/images/spaceInvaders.gif" width="50" height="50"class="d-inline-block rounded-circle" alt=""> Museu dos Jogos
+            src="../resources/images/spaceInvaders.gif" width="50" height="50" class="d-inline-block rounded-circle" alt=""> Museu dos Jogos
         </nav>
+        <?php if(isset($_SESSION['username'])){?>  
+                <div class="welcome">  
+                        <a>Olá - <?php echo $_SESSION['username']; ?></a>
+                </div>  
+        <?php } else { echo "<a>Efetue o login.</a>";} ?> 
     </div>
 <!--navbar principal -->
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
@@ -16,26 +22,25 @@
                 <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item active"><a class="nav-link" href="plataformas.php">Plataformas</a></li>
                 <li class="nav-item active"><a class="nav-link" href="games.php">Games</a></li>
-                
+            
+            <?php if(isset($_SESSION['username'])){?>   
                 <li class="nav-item active"><a class="nav-link" href="catalogar.php">Catálogo</a></li>
-                  
+            <?php  } ?>    
 
-                 
                 <li class="nav-item active"><a class="nav-link" href="sobre.php">Sobre</a></li>
             </ul>
         <!--botão do Modal de Login -->
         
             
-            <?php if(isset($_SESSION['usuario'])): ?>
-                <a id="userLog" href="includes/sair.php" class="btn btn-secondary text-primary">Sair</a>
-            <?php else: ?>
+            <?php if(isset($_SESSION['username'])){ ?>
+                <a id="logout" href="" class="btn btn-secondary text-primary">Sair</a>
+            <?php } else {?>
                 <a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>
-            <?php endif; ?>    
+             <?php } ?>  
             
             <!--<a id="user" href="" class="btn btn-secondary text-primary" data-toggle="modal" data-target="#formModal">Entrar</a>-->
         
-    <!--Começo do Modal de Login -->
-        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -46,18 +51,19 @@
                     </div>
             <!--Corpo do Modal de Login -->
                     <div class="modal-body">
-                        <form action="includes/login.php" method="get">
+                        <!--<form action="includes/login.php" method="get">-->
                             <div class="form-group">
-    	                       <label for="email">Email</label> <input type="email" name="email" class="form-control" id="email"  required>
+                               <label for="email">Email</label> <input type="email" name="email" class="form-control" id="email"  required>
                             </div>
                             <div class="form-group">
-    	                       <label for="pwd">Senha</label> <input type="password" name="senha" class="form-control" id="pwd"  required>
+                               <label for="password">Senha</label> <input type="password" name="password" class="form-control" id="password"  required>
                             </div>
-                            <button type="submit" class="btn btn-dark">Entrar</button>
-                        </form><br>
+                            <button type="submit" id="login_button" class="btn btn-dark">Entrar</button>
+                        <!--</form>-->
+                            <br>
                     <!--Link de criação de usuário -->
                         <div class="modal-footer">
-                            <p>Não possui conta? <a id="user" href="" data-toggle="modal"data-target="#cadastroModal"> Crie uma!</a></p>
+                            <p>Não possui conta? <a id="user" href="" data-toggle="modal" data-target="#cadastroModal"> Crie uma!</a></p>
                         </div>
                         <!-- Modal do Cadastro -->
                         <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
@@ -71,37 +77,37 @@
                                     </div>
                     <!--Corpo do Modal de Login -->
                                     <div class="modal-body">
-                                        <form action="registrar.php" method="post">
+                                        
+                                        <form action="../control/create/createUser.php" method="post">
+                                            
                                             <div  class="form-group" >
-                                                <label>Nome</label><br><input type="text" name="nome" required>
+                                                <label>Nome</label><br><input type="text" id="nome" name="nome" required>
                                             </div>
                                             <div  class="form-group" >
-                                                <label>Sobrenome</label><br><input type="text" name="sobrenome" required>
+                                                <label>Sobrenome</label><br><input type="text" id="sobrenome" name="sobrenome" required>
                                             </div>
                                             <div  class="form-group" >
-                                                <label>Data Nascimento</label><br><input type="date" name="" required>
+                                            <label>Endereço</label><br><input type="text" id="endereco" name="endereco">
                                             </div>
                                             <div  class="form-group" >
-                                                <label>Sexo</label>
-                                                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
-                                                <label><input type="radio" name="sexo" value="feminino">Feminino</label>
-                                                <label><input type="radio" name="sexo" value="outro">Outro</label>
-                                            </div>
-                                            <div  class="form-group" >
-                                            <label>Endereço</label><br><input type="text" name="endereco">
-                                            </div>
-                                            <div  class="form-group" >
-                                                <label>Tel(Cel)</label><br><input type="tel" name="telefone">
+                                                <label>Tel(Cel)</label><br><input type="text" id="telefone" name="telefone">
                                             </div>
                                             <div>
-                                                <label>E-mail</label><br><input type="email" name="emailCadastro" required>
+                                                <label>E-mail</label><br><input type="text" id="email_cadastro" name="email_cadastro" required>
                                             </div>
-                                            <input type="submit" name="cadastra" value="Enviar">
+                                            <div>
+                                                <label>Senha</label><br><input type="password" id="senha" name="senha" required>
+                                            </div>
+                                            <input  type="submit" name="cadastrar" id="cadastro_id" class="btn btn-dark" value="Enviar">
+                                           
                                         </form>
+                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-            </div>
-    </nav>
-
+                  </div>
+              </div>
+          </div>
+      </div>         
+  </nav>

@@ -4,16 +4,14 @@
 <?php
   include("includes/head.php");
 ?>
-    <title>Home | Museu dos Jogos</title>
+<title>Home | Museu dos Jogos</title>
 </head>
 <body>
-
 <?php 
 include("includes/header.php");
 ?>  
 <div class="container conteudoCorpo">
     <div class="container">
-
       <h1 align="center">Bem Vindo ao Museu dos Jogos</h1>
       <div id="carouselGames" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false" align="center">
          <div class="carousel-inner">
@@ -45,7 +43,92 @@ include("includes/header.php");
 
 
 </div>
-<?php include("includes/footer.php"); ?>    
+<?php include("includes/footer.php"); ?> 
+
+<script>
+$(document).ready(function(){  
+      $('#login_button').click(function(){  
+           var email = $('#email').val();  
+           var password = $('#password').val();  
+           if(email != '' && password != '')  
+           {  
+                $.ajax({  
+                     url:"../control/login/logon.php",  
+                     method:"POST",  
+                     data: {email:email, password:password},  
+                     success:function(data)  
+                     {  
+                          //alert(data);  
+                          if(data == 'No')  
+                          {  
+                               alert("Wrong Data");  
+                          }  
+                          else  
+                          {  
+                               //$('#loginModal').hide();  
+                               location.reload();  
+                          }  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                alert("Both Fields are required");  
+           }  
+      });  
+      $('#logout').click(function(){  
+           var action = "logout";  
+           $.ajax({  
+                url:"../control/login/logon.php",  
+                method:"POST",  
+                data:{action:action},  
+                success:function()  
+                {  
+                     location.reload();  
+                }  
+           });  
+      }); 
+
+      $('#cadastro').click(function(){  
+           var nome = $('#nome').val();
+           var sobrenome = $('#sobrenome').val(); 
+           var endereco = $('#endereco').val(); 
+           var telefone = $('#telefone').val();  
+           var email = $('#email_cadastro').val();  
+           var senha = $('#senha').val();  
+           if(nome != '' && sobrenome != ''&& endereco != '' && telefone != '' && email != '' && senha != '')  
+           {  
+                $.ajax({  
+                     url:"../control/create/createUser.php",  
+                     method:"POST",  
+                     data: {nome:nome,
+                            sobrenome:sobrenome,
+                            endereco:endereco,
+                            telefone:telefone,
+                            email:email, 
+                            senha:senha},  
+                     success:function(data)  
+                     {  
+                          //alert(data);  
+                          if(data == 'No')  
+                          {  
+                               alert("Wrong Data");  
+                          }  
+                          else  
+                          {  
+                               //$('#loginModal').hide();  
+                               location.reload();  
+                          }  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                alert("Both Fields are required");  
+           }  
+      });   
+ }); 
+ </script>    
 
 </body>
 </html>
