@@ -27,3 +27,11 @@ Inserir mapa do google com a localização da empresa.
 
 2) Desenvolva CRUD de manutenção de um cadastro em PHP e mysql (inserir, excluir, alterar e selecionar).
    O cadastro deve ter no mínimo 6 (seis) campos com validações dos dados no lado cliente e no servidor.
+
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Passos para uso:
+
+-Login com email e senha (No arquivo 'script mysql.sql') 
+-Na aba Catalogo(que aparece ao logar) existe uma tabela que exibe os jogos cadastrados pelo usuário e a possibilidade de criação de um novo registro,bem como as possibilidades de excluir e editar um regristo.  
