@@ -52,7 +52,7 @@ include("includes/header.php");
           <td>
           <select name="venda_troca" class="form-control">
           <option value="Venda">Venda</option>
-          <option value="Venda">Troca</option>
+          <option value="Troca">Troca</option>
           </select>
           </td>
           <td><button class="btn btn-primary" type="submit" >Cadastrar</button></td>
