@@ -17,7 +17,7 @@ include("includes/header.php");
 <h3 align="center">tela somente deve aparecer quando usuario estiver logado</h3>
 
 <div class="container">
-    <table class="table table-responsive">
+    <table class="table table-responsive-md">
       <thead>
         <tr>
           <th>Título do Jogo</th>
@@ -49,7 +49,12 @@ include("includes/header.php");
              </select>  
             
           </td>
-          <td><input type="text" name="venda_troca" class="form-control" placeholder="Venda ou Troca"></td>
+          <td>
+          <select name="venda_troca" class="form-control">
+          <option value="Venda">Venda</option>
+          <option value="Venda">Troca</option>
+          </select>
+          </td>
           <td><button class="btn btn-primary" type="submit" >Cadastrar</button></td>
           </tr>
         </form>
