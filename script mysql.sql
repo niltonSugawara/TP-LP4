@@ -1,4 +1,4 @@
-CREATE DATABASE meusgames;
+CREATE DATABASE museugames;
 
 CREATE TABLE usuario 
 (
