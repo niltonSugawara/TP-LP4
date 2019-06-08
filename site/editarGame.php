@@ -50,7 +50,7 @@ include("includes/header.php");
 <input type="hidden" class="form-control" name="id_game" value="<?= $prod1['id_game'] ?>"/>
 
 <div class="form-group">
-      <label for="titulo" >Nome  </label>
+      <label for="titulo">Nome</label>
       <input type="text"  class=" form-control" name="titulo" value="<?= $prod1['nome_game'] ?>" required/>
 </div>
 

@@ -1,3 +1,22 @@
+<?php
+     //if(!isset($con))include("../control/conexao.php");
+     //if(!isset($con)) $con = abreConexao();
+     //$id=$_SESSION['id'];
+     $con=mysqli_connect("localhost", "root", "", "museugames");
+     $sql = "SELECT
+               game.nome AS nome_game,
+               plataforma.nome AS nome_plataforma,
+               game.venda_troca,
+               usuario.nome AS nome_usuario
+            FROM game
+            INNER JOIN plataforma
+               ON plataforma.id_plataforma = game.id_plataforma
+            INNER JOIN usuario
+               ON usuario.id_usuario = game.id_usuario 
+            ORDER BY game.id_game";
+     $query = mysqli_query($con, $sql);
+     //echo $query;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,58 +39,24 @@ include("includes/header.php");
 					<tr>
 						<th>Título</th>
 						<th>Console</th>
-						<th>Usuários</th>
+						<th>Usuário</th>
 						<th>Venda/Troca</th>
-						<th>Contato(Tel)</th>
-						<th>Enviar Mensagem</th>
 					</tr>
 					</thead>
 					<tbody>
+				    <?php
+                        while($prod = mysqli_fetch_array($query))
+                    { ?>		
 						<tr>
-							<td>Donkey Kong Country</td>
-							<td>Super Nintendo</td>
-							<td>Nilton M.</td>
-							<td>Venda</td>
-							<td>(01)12345-0987</td>
-							<td>
-								<a  href="" class="text-primary" data-toggle="modal"
-					data-target="#formModalTxt">Enviar</a>
-							</td>
+						<td><?= $prod['nome_game'] ?></td>
+						<td><?= $prod['nome_plataforma'] ?></td>
+						<td><?= $prod['nome_usuario'] ?></td>
+						<td><?= $prod['venda_troca'] ?></td>
 						</tr>
+					<?php } ?>
 					</tbody>
 				</table>
 			</div>
-		</div>
-</div>
-
-<!-- Modal de envio de mensagem-->
-<div class="modal fade" id="formModalTxt" tabindex="-1" role="dialog" aria-labelledby="modalform" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-							<h5>Mensagem</h5>
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-				</div>
-				<!--Corpo do Modal de Login -->
-				<div class="modal-body">
-						<form action="#" method="post">
-							<div class="form-group">
-								<label for="email">Seu Email</label> <input type="email" name="email"
-										class="form-control" id="email" required>
-							</div>
-							<div class="form-group">
-								<label for="msg">Mensagem a ser enviada</label>
-								<br>
-								<textarea class="form-control" name="msgTxt" rows="5" cols="48" required></textarea>
-							</div>
-							<button type="submit" class="btn btn-dark">Enviar</button>
-
-						</form>
-				</div>
-		 	</div>
 		</div>
 </div>
 
